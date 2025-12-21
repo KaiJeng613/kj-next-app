@@ -2,8 +2,7 @@ import Link from "next/link";
 import Layout from '@/components/Layout';
 import {DownloadSvg} from '../components/Icons';
 import AnimatedText from '@/components/AnimatedText'
-import styles from 'src/styles/Home.module.css';
-import '../app/globals.css';
+import styles from '@/styles/Home.module.css';
 
 export default function Home() {
   return (

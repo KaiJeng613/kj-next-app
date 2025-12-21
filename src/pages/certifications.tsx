@@ -1,10 +1,9 @@
 import Image from 'next/image';
 import Head from 'next/head';
 import AnimatedText from '@/components/AnimatedText'
-import styles from 'src/styles/Home.module.css';
+import styles from '@/styles/Home.module.css';
 import React from 'react';
 import {motion, useScroll} from "framer-motion";
-import '../app/globals.css';
 
 const githuburl = 'https://github.com/KyleWong613/KJSite/blob/main/README.md#certificates';
 

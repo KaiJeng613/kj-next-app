@@ -1,10 +1,9 @@
 import Image from 'next/image';
 import Head from 'next/head';
 import AnimatedText from '@/components/AnimatedText'
-import styles from 'src/styles/Home.module.css';
+import styles from '@/styles/Home.module.css';
 import React from 'react';
 import {motion, useScroll} from "framer-motion";
-import '../app/globals.css';
 import { PositionType } from "@/util/ExperienceModel"
 import Layout from '@/components/Layout';
 import Link from 'next/link';

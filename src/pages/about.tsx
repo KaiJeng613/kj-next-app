@@ -3,7 +3,6 @@ import Link from 'next/link';
 import Head from 'next/head';
 import AnimatedText from '@/components/AnimatedText'
 import styles from '../styles/Home.module.css';
-import '../app/globals.css';
 import Layout from '@/components/Layout';
 import { GithubSvg } from '@/components/Icons'; 
 import React from 'react';
