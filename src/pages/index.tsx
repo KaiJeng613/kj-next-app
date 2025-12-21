@@ -7,7 +7,7 @@ import styles from '@/styles/Home.module.css';
 export default function Home() {
   return (
     <div className={styles.container}>
-      <main className='flex items-center text-dark w-full min-h-screen xl:p-24'>
+      <main className="w-full min-h-screen text-dark xl:p-24">
         <Layout >  
           <div className="flex flex-col items-center justify-center text-dark w-full min-h-[70vh] text-center">
             <div className="w-full max-w-4xl mx-auto flex flex-col items-center justify-center">
