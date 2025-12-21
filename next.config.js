@@ -4,14 +4,13 @@ const isProd = process.env.NODE_ENV === 'production'
 
 const nextConfig = {
     assetPrefix: isProd ? '' : 'http://localhost:3000',
-    experimental:{
-        appDir: true,
+    images: {
+        remotePatterns: [
+            { protocol: "https", hostname: "lemonsqueezy.imgix.net" },
+            { protocol: "https", hostname: "image.tmdb.org" },
+            { protocol: "https", hostname: "kaijeng.netlify.app" },
+        ],
     },
-    i18n: {
-        locales: ["en"],
-        defaultLocale: "en",
-      },
-    images: { domains: ["lemonsqueezy.imgix.net", "image.tmdb.org", "kaijeng.netlify.app"] },
 }
 
 

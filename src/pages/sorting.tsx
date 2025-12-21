@@ -1,8 +1,7 @@
 import Image from 'next/image';
 import Head from 'next/head';
 import AnimatedText from '@/components/AnimatedText'
-import styles from 'src/styles/Home.module.css';
-import '../app/globals.css'; 
+import styles from '@/styles/Home.module.css';
 
 export default function Home() {
   const products = [{id: 1,name: 7}, {id: 2,name: 3}, {id: 3,name: 15},
