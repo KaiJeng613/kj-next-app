@@ -14,7 +14,7 @@ export default function handler(req: any, res: {
     };
 }) {
     res.status(200).json({
-        github: "https://github.com/KyleWong613/",
+        github: "https://github.com/Kaijeng613/",
         linkedin: "https://www.linkedin.com/in/wong-kai-jeng/",
         email: "kaijengre2@gmail.com",
         phone: "0175597576",

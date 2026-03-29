@@ -4,8 +4,9 @@ import AnimatedText from '@/components/AnimatedText'
 import styles from '@/styles/Home.module.css';
 import React from 'react';
 import {motion, useScroll} from "framer-motion";
+import { GITHUB_URL } from '@/util/config';
 
-const githuburl = 'https://github.com/KyleWong613/KJSite/blob/main/README.md#certificates';
+const githuburl = `${GITHUB_URL}KJSite/blob/main/README.md#certificates`;
 
 const CertDetails = ({certname, company, certlink, date, details, details2}:
   {certname: string, company: string, certlink: string, date:string, details: string, details2: string}) =>

@@ -8,6 +8,7 @@ import Circle from '@/components/Circle';
 import {HireMeButton} from '@/components/HireMeButton';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCertificate} from '@fortawesome/free-solid-svg-icons';
+import { GITHUB_PROFILE } from '@/util/config';
 
 const Navbar = () => {
 
@@ -37,7 +38,7 @@ const Navbar = () => {
             <Link href="/experiences" className='mr-[2rem]'>Experiences</Link>
           </nav>
           <nav className="flex items-center justify-center flex-wrap">
-            <motion.a href="https://github.com/KyleWong613" target={"_blank"}
+            <motion.a href={GITHUB_PROFILE} target={"_blank"}
             whileHover={{y:-2}}
             whileTap={{scale:0.9}}
             className="w-8 mx-3">
@@ -70,7 +71,7 @@ const Navbar = () => {
               <Link href="/experiences" className='mr-4'>Experiences</Link>
             </nav>
             <nav className="flex items-center justify-center flex-wrap pt-2 mr-4">
-              <motion.a href="https://github.com/KyleWong613" target={"_blank"}
+              <motion.a href={GITHUB_PROFILE} target={"_blank"}
               whileHover={{y:-2}}
               whileTap={{scale:0.9}}
               className="w-6 mx-3">

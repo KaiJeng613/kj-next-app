@@ -13,7 +13,7 @@ export async function loadContactold() {
     const env = process.env.NODE_ENV
     if (env == "production"){
         const data = {
-            github: "https://github.com/KyleWong613/",
+            github: "https://github.com/Kaijeng613/",
             linkedin: "https://www.linkedin.com/in/wong-kai-jeng/",
             email: "kaijengre2@gmail.com",
             phone: "0175597576",
