@@ -9,6 +9,7 @@ const nextConfig = {
             { protocol: "https", hostname: "lemonsqueezy.imgix.net" },
             { protocol: "https", hostname: "image.tmdb.org" },
             { protocol: "https", hostname: "kaijeng.netlify.app" },
+            { protocol: "https", hostname: "etherscan.io" },
         ],
     },
 }

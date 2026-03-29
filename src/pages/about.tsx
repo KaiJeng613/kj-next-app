@@ -99,10 +99,13 @@ export default function About() {
                     <h2 className="mb-4 text-lg font-bold uppercase text-dark/75">Portfolio</h2>
                   </div>
                 </div>
-                <p className='font-medium'>Hi, I am Kai Jeng, I am a Software Engineer
+                <p className='font-medium'>Hello, I'm Kai Jeng Wong, a Software Developer with over 6 years of experience specializing in full-stack development, cloud migration, and enterprise application architecture. I have a proven track record of delivering scalable solutions across diverse industries, including blockchain technology, financial services, and e-commerce.
                 </p>
                 <br></br>
-                <p className='font-medium'>Below are some of my featured projects:
+                <p className='font-medium'>My expertise spans .NET technologies, modern web frameworks, and cloud platforms, with a strong focus on building robust, user-centric applications. I'm passionate about leveraging cutting-edge technologies to solve complex business challenges and drive digital transformation.
+                </p>
+                <br></br>
+                <p className='font-medium'>Featured Projects:
                 </p>    
                 <br></br>
                 <div className="grid grid-cols-12 gap-y-32 gap-x-16 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">

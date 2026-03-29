@@ -62,12 +62,28 @@ export default function Experiences() {
 
               <Image
                   className="my-8 first:mt-0 last:mb-0 flex-col"
+                  src="https://etherscan.io/images/brandassets/etherscan-logo-circle.svg"
+                  width={75}
+                  height={75}
+                  alt="etherscan"
+                />          
+                <Details position="Software Developer" company="Etherscan" companysite="https://etherscan.io/" startyear="2025" endyear="" current="Current" startmonth='November' endmonth=''
+                work="Developing and maintaining blockchain explorer features for Ethereum network"
+                worklink= ""
+                worklinkdesc= ""
+                work2="Building scalable web applications to display real-time blockchain data and analytics"
+                worklink2 = ""
+                worklinkdesc2=''
+                work3="Collaborating with cross-functional teams to enhance user experience and platform performance"/>
+
+              <Image
+                  className="my-8 first:mt-0 last:mb-0 flex-col"
                   src="/aeoncredit.jpg"
                   width={75}
                   height={75}
                   alt="aeoncredit"
                 />          
-                <Details position="Senior .NET Developer" company="Aeon Credit Service " companysite="https://www.aeoncredit.com.my/" startyear="2023" endyear="" current="Current" startmonth='November' endmonth=''
+                <Details position="Senior .NET Developer" company="Aeon Credit Service " companysite="https://www.aeoncredit.com.my/" startyear="2023" endyear="2025" current="" startmonth='November' endmonth='November'
                 work="Web & Wallet Team"
                 worklink= "h"
                 worklinkdesc= ""
