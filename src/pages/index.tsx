@@ -27,7 +27,7 @@ export default function Home() {
                 "
                 download={false}>Resume <DownloadSvg className='w-6 ml-1'/></Link>
                 <Link href="mailto:kaijengre2@gmail.com"
-                className="text-lg font-medium capitalize text-dark underline underline-offset-4 hover:opacity-80"
+                className="text-lg font-medium capitalize text-dark hover:opacity-80"
                 >Email Me</Link>
               </div>
             </div>
@@ -41,7 +41,7 @@ export default function Home() {
           Quick links to the main sections of the portfolio. Expand a card for details, or click through.
         </p>
 
-        <div className="mt-8 grid grid-cols-1 place-items-stretch gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 grid grid-cols-1 place-items-stretch gap-8 md:grid-cols-2 lg:grid-cols-3">
           <div className="w-full rounded-2xl border border-dark/10 bg-white p-6 shadow-sm transition hover:shadow-lg">
             <Link href="/about" className="block">
               <h3 className="text-xl font-semibold text-dark">About Me</h3>
