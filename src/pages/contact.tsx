@@ -34,7 +34,7 @@ export default function Contact({contacts}: InferGetStaticPropsType<typeof getSt
         />
 
         <div className="mx-auto -mt-2 max-w-2xl text-center text-dark/70">
-          Want to collaborate or chat about a role? Pick a channel below — I usually respond within 24–48 hours.
+          I'm open to new opportunities and collaborations. Feel free to reach out through any of the channels below.
         </div>
 
         <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2">
