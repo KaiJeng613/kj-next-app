@@ -18,7 +18,7 @@ export async function getStaticProps() {
 
 export default function Contact({contacts}: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
-    <div className="layout min-h-screen">
+    <div className="layout min-h-screen bg-gradient-to-b from-white to-gray-50">
       <Head>
         <title>Kai Jeng | Contact</title>
         <meta
@@ -28,128 +28,114 @@ export default function Contact({contacts}: InferGetStaticPropsType<typeof getSt
       </Head>
 
       <div className="mx-auto w-full max-w-6xl px-4 pb-16 pt-10">
-        <AnimatedText
-          text="Contact"
-          className="dark:text-light text-8xl font-bold w-full capitalize !text-6xl xl:!text-5xl lg:!text-6xl md:!text-5xl sm:!text-3xl"
-        />
-
-        <div className="mx-auto -mt-2 max-w-2xl text-center text-dark/70">
-          I'm open to new opportunities and collaborations. Feel free to reach out through any of the channels below.
+        {/* Header Section */}
+        <div className="text-center mb-16">
+          <AnimatedText
+            text="Get In Touch"
+            className="dark:text-light text-8xl font-bold w-full capitalize !text-6xl xl:!text-5xl lg:!text-6xl md:!text-5xl sm:!text-3xl"
+          />
+          <p className="mx-auto mt-6 max-w-2xl text-lg text-dark/70">
+            I'm open to new opportunities and collaborations. Feel free to reach out through any of the channels below.
+          </p>
         </div>
 
-        <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2">
+        {/* Contact Cards Grid */}
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4 mb-12">
+          {/* Email Card */}
           <a
             href={`mailto:${contacts.email}`}
-            className="group rounded-2xl border border-dark/10 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg"
+            className="group relative overflow-hidden rounded-2xl border border-dark/10 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
           >
-            <div className="flex items-start justify-between gap-4">
-              <div className="flex items-center gap-3">
-                <span className="grid h-11 w-11 place-items-center rounded-xl bg-dark text-light">
-                  <FontAwesomeIcon icon={faEnvelope} className="h-5 w-5" />
-                </span>
-                <div>
-                  <div className="text-sm font-semibold text-dark/70">Email</div>
-                  <div className="text-lg font-bold text-dark group-hover:underline group-hover:underline-offset-4">
-                    {contacts.email}
-                  </div>
-                </div>
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <div className="relative">
+              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-dark text-light transition-transform group-hover:scale-110">
+                <FontAwesomeIcon icon={faEnvelope} className="h-6 w-6" />
               </div>
-              <span className="text-sm font-medium text-dark/50">Open →</span>
+              <h3 className="text-sm font-semibold uppercase tracking-wide text-dark/60 mb-2">Email</h3>
+              <p className="text-base font-bold text-dark break-words">{contacts.email}</p>
+              <div className="mt-4 flex items-center text-sm font-medium text-dark/50 group-hover:text-dark transition-colors">
+                <span>Send message</span>
+                <span className="ml-1 transition-transform group-hover:translate-x-1">→</span>
+              </div>
             </div>
-            <p className="mt-4 text-sm text-dark/70">
-              Best for opportunities, questions, or project discussions.
-            </p>
           </a>
 
+          {/* Phone Card */}
           <a
             href={`tel:${contacts.phone}`}
-            className="group rounded-2xl border border-dark/10 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg"
+            className="group relative overflow-hidden rounded-2xl border border-dark/10 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
           >
-            <div className="flex items-start justify-between gap-4">
-              <div className="flex items-center gap-3">
-                <span className="grid h-11 w-11 place-items-center rounded-xl bg-dark text-light">
-                  <FontAwesomeIcon icon={faPhone} className="h-5 w-5" />
-                </span>
-                <div>
-                  <div className="text-sm font-semibold text-dark/70">Phone</div>
-                  <div className="text-lg font-bold text-dark group-hover:underline group-hover:underline-offset-4">
-                    {contacts.phone}
-                  </div>
-                </div>
+            <div className="absolute inset-0 bg-gradient-to-br from-green-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <div className="relative">
+              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-dark text-light transition-transform group-hover:scale-110">
+                <FontAwesomeIcon icon={faPhone} className="h-6 w-6" />
               </div>
-              <span className="text-sm font-medium text-dark/50">Call →</span>
+              <h3 className="text-sm font-semibold uppercase tracking-wide text-dark/60 mb-2">Phone</h3>
+              <p className="text-base font-bold text-dark">{contacts.phone}</p>
+              <div className="mt-4 flex items-center text-sm font-medium text-dark/50 group-hover:text-dark transition-colors">
+                <span>Call now</span>
+                <span className="ml-1 transition-transform group-hover:translate-x-1">→</span>
+              </div>
             </div>
-            <p className="mt-4 text-sm text-dark/70">
-              Great for quick clarifications and scheduling.
-            </p>
           </a>
 
+          {/* GitHub Card */}
           <a
             href={contacts.github}
             target="_blank"
             rel="noreferrer"
-            className="group rounded-2xl border border-dark/10 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg"
+            className="group relative overflow-hidden rounded-2xl border border-dark/10 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
           >
-            <div className="flex items-start justify-between gap-4">
-              <div className="flex items-center gap-3">
-                <span className="grid h-11 w-11 place-items-center rounded-xl bg-dark text-light">
-                  <GithubSmallSvg className="h-5 w-5" />
-                </span>
-                <div>
-                  <div className="text-sm font-semibold text-dark/70">GitHub</div>
-                  <div className="text-lg font-bold text-dark group-hover:underline group-hover:underline-offset-4">
-                    {new URL(contacts.github).pathname.replace(/\//g, "") || "Profile"}
-                  </div>
-                </div>
+            <div className="absolute inset-0 bg-gradient-to-br from-gray-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <div className="relative">
+              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-dark text-light transition-transform group-hover:scale-110">
+                <GithubSmallSvg className="h-6 w-6" />
               </div>
-              <span className="text-sm font-medium text-dark/50">View →</span>
+              <h3 className="text-sm font-semibold uppercase tracking-wide text-dark/60 mb-2">GitHub</h3>
+              <p className="text-base font-bold text-dark">
+                {new URL(contacts.github).pathname.replace(/\//g, "") || "Profile"}
+              </p>
+              <div className="mt-4 flex items-center text-sm font-medium text-dark/50 group-hover:text-dark transition-colors">
+                <span>View profile</span>
+                <span className="ml-1 transition-transform group-hover:translate-x-1">→</span>
+              </div>
             </div>
-            <p className="mt-4 text-sm text-dark/70">
-              Code samples, projects, and contributions.
-            </p>
           </a>
 
+          {/* LinkedIn Card */}
           <a
             href={contacts.linkedin}
             target="_blank"
             rel="noreferrer"
-            className="group rounded-2xl border border-dark/10 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg"
+            className="group relative overflow-hidden rounded-2xl border border-dark/10 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
           >
-            <div className="flex items-start justify-between gap-4">
-              <div className="flex items-center gap-3">
-                <span className="grid h-11 w-11 place-items-center rounded-xl bg-[#0A66C2] text-white">
-                  <LinkedInSmallSvg className="h-5 w-5" />
-                </span>
-                <div>
-                  <div className="text-sm font-semibold text-dark/70">LinkedIn</div>
-                  <div className="text-lg font-bold text-dark group-hover:underline group-hover:underline-offset-4">
-                    Connect
-                  </div>
-                </div>
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <div className="relative">
+              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl overflow-hidden transition-transform group-hover:scale-110">
+                <LinkedInSmallSvg className="h-12 w-12" />
               </div>
-              <span className="text-sm font-medium text-dark/50">Open →</span>
+              <h3 className="text-sm font-semibold uppercase tracking-wide text-dark/60 mb-2">LinkedIn</h3>
+              <p className="text-base font-bold text-dark">Connect</p>
+              <div className="mt-4 flex items-center text-sm font-medium text-dark/50 group-hover:text-dark transition-colors">
+                <span>View profile</span>
+                <span className="ml-1 transition-transform group-hover:translate-x-1">→</span>
+              </div>
             </div>
-            <p className="mt-4 text-sm text-dark/70">
-              Professional profile, experience, and messaging.
-            </p>
           </a>
         </div>
 
-        <div className="mt-10 rounded-2xl border border-dark/10 bg-gradient-to-br from-white to-zinc-50 p-6 shadow-sm">
-          <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
-            <div>
-              <h2 className="text-xl font-bold text-dark">Prefer email?</h2>
-              <p className="mt-1 text-sm text-dark/70">
-                Click below to start a message with a pre-filled subject.
-              </p>
-            </div>
-            <a
-              href={`mailto:${contacts.email}?subject=${encodeURIComponent("Portfolio inquiry")}`}
-              className="inline-flex items-center justify-center rounded-xl bg-dark px-5 py-3 text-sm font-semibold text-light transition hover:bg-dark/90"
-            >
-              Send an email
-            </a>
-          </div>
+        {/* CTA Section */}
+        <div className="mt-16 rounded-3xl border border-dark/10 bg-gradient-to-br from-dark to-dark/90 p-12 text-center shadow-xl md:p-8">
+          <h2 className="text-3xl font-bold text-light mb-4 md:text-2xl">Ready to Start a Project?</h2>
+          <p className="mx-auto max-w-xl text-lg text-light/80 mb-8">
+            Let's discuss how we can work together to bring your ideas to life. Send me an email to get started.
+          </p>
+          <a
+            href={`mailto:${contacts.email}?subject=${encodeURIComponent("Project Inquiry")}`}
+            className="inline-flex items-center justify-center rounded-xl bg-light px-8 py-4 text-base font-semibold text-dark transition-all duration-300 hover:bg-light/90 hover:shadow-lg hover:-translate-y-0.5"
+          >
+            Send an Email
+          </a>
         </div>
       </div>
     </div>
