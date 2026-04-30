@@ -69,10 +69,10 @@ const Logo = () => {
 
           {/* Wordmark */}
           <div className="flex flex-col leading-none">
-            <span className="font-bold text-base tracking-tight text-dark dark:text-light">
+            <span className="font-bold text-base tracking-tight text-primary dark:text-light">
               Kai Jeng
             </span>
-            <span className="text-[10px] uppercase tracking-[0.18em] text-dark/60 dark:text-light/60">
+            <span className="text-[10px] uppercase tracking-[0.18em] text-primary/70 dark:text-light/60">
               Software Engineer
             </span>
           </div>
