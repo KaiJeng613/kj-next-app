@@ -4,7 +4,6 @@ import React, { Component, useState } from 'react';
 import Logo from '../components/Logo';
 import {GithubSvg, LinkedInSvg} from './Icons';
 import {motion} from 'framer-motion';
-import Circle from '@/components/Circle';
 import {HireMeButton} from '@/components/HireMeButton';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCertificate} from '@fortawesome/free-solid-svg-icons';
@@ -29,7 +28,6 @@ const Navbar = () => {
         <HireMeButton />
 
         <div className="w-full flex justify-between items-center lg:hidden">
-          <Circle />
           <Logo />
           <nav>
             <Link href="/" className='mr-[2rem]'>Home</Link>
